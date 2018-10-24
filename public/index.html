@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>CS485 - Fuel Gauge Hello World</title>
+  <script src="/jquery/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+  <script type="text/javascript" src="javascripts/fuel-interactions.js"></script>
+</head>
+
+<body>
+  <h1>Basic Fuel Gauge UI</h1>
+  <p>Fuel Gauge<span id="miles-left">Miles until empty: <strong>50</strong> miles</span></p>
+  <meter id="fuel-gauge" min="0" max="100" low="25" high="51" optimum="100" value="50"></meter>
+  <p>E | | | | | | | | | | | | | | | | | | | 50% | | | | | | | | | | | | | | | | | | | F</p>
+  <div class="all-buttons">
+    <div class="button-wrapper">
+      <button class="fill-tank-button button">Fill tank with fuel</button>
+    </div>
+    <div class="button-wrapper">
+      <button class="drive-button button">Drive 10 miles</button>
+    </div>
+    
+  </div>
+  
+</body>
