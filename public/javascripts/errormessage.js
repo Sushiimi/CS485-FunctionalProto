@@ -17,8 +17,8 @@ $( function () {
     }// end errorDisplayed FALSE
 
     $(document).keypress( function(e) {
-      // if 3 is clicked to confirm that
-      // error was identifiedS
+      // if 'enter' is clicked to confirm that
+      // error was identified
       if(e.which == 13) {
         $(".off-image").show("slow", function() {});
         $(".on-image").hide("slow", function() {});
