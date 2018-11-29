@@ -1,0 +1,5 @@
+shifting gears (keyboard input)
+changing modes (arduino button mapped to keyboard input)
+identifying errors (on-screen item, button to close/complete error)
+
+Alt: changing light modes
