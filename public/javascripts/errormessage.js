@@ -1,4 +1,4 @@
-// timed error messages that appear on screen (every 10 seconds)
+// timed error messages that appear on screen
 $( function () {
   var errorDisplayed = false;
   var errorMessages = ["Tire Pressure Low","Dead Battery","Gas Cap Issues","Starter Issues"];

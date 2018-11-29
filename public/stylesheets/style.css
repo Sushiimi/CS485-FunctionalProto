@@ -36,20 +36,21 @@ body {
 
 .gear-table-wrapper {
   position: absolute;
-  left: 837px;
+  left: 825px;
   top: 718px;
   z-index: 2;
 }
 .gear-table {
-  font-size: 22pt;
+  font-size: 28pt;
   color: black;
+  border-collapse: collapse;
   border-style: solid;
   border-color: black;
 }
 
 td {
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 1px;
   padding-bottom: 1px;
 }
