@@ -5,6 +5,7 @@ body {
 }
 
 .mode-image {
+  z-index: 1;
   width: 57%;
 }
 
@@ -31,4 +32,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.gear-table-wrapper {
+  position: absolute;
+  left: 837px;
+  top: 718px;
+  z-index: 2;
+}
+.gear-table {
+  font-size: 22pt;
+  color: black;
+  border-style: solid;
+  border-color: black;
+}
+
+td {
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }

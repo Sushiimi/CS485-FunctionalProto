@@ -3,7 +3,7 @@ $( function () {
   var errorDisplayed = false;
   var errorMessages = ["Tire Pressure Low","Dead Battery","Gas Cap Issues","Starter Issues"];
   var min = 0, max = 3;
-  var errorInterval = 5000;
+  var errorInterval = 10000;
 
   window.setInterval( function() {
     if( errorDisplayed == false ) {
@@ -23,8 +23,7 @@ $( function () {
         $(".off-image").show("slow", function() {});
         $(".on-image").hide("slow", function() {});
         errorDisplayed = false;
-        $(".error-message").html("No errors.");
-        setInterval(errorInterval);
+        $(".error-message").html("");
       }
     });
 
