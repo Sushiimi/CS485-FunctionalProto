@@ -1,27 +1,28 @@
 <html>
 
 <head>
-  <title>CS485 - Fuel Gauge Hello World</title>
+  <title>Dashboard Prototype</title>
   <script src="/jquery/jquery.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
-  <script type="text/javascript" src="javascripts/fuel-interactions.js"></script>
+  <script type="text/javascript" src="javascripts/changemode.js"></script>
+  <script type="text/javascript" src="javascripts/errormessage.js"></script>
 </head>
 
 <body>
-  <h1>Basic Fuel Gauge UI</h1>
-  <p>Fuel Gauge<span id="miles-left">Miles until empty: <strong>50</strong> miles</span></p>
-  <meter id="fuel-gauge" min="0" max="100" low="25" high="51" optimum="100" value="50"></meter>
-  <p>E | | | | | | | | | | | | | | | | | | | 50% | | | | | | | | | | | | | | | | | | | F</p>
-  <div class="all-buttons">
-    <div class="button-wrapper">
-      <button class="fill-tank-button button">Fill tank with fuel</button>
+  <div class="error-message-wrapper">
+    <div class="error-image">
+      <img class="caution-image off-image" src="images/cautionOFF.png"></img>
+      <img class="caution-image on-image" src="images/cautionON.png" hidden></img>
     </div>
-    <div class="button-wrapper">
-      <button class="drive-button button">Drive 10 miles</button>
+      <p class="error-message">No errors.</p>
     </div>
-    
+  </div>
+  
+  <div class="mode-image-wrapper">
+    <img class="mode-image standard centered" src="images/standard.jpg"></img>
+    <img class="mode-image travel centered" src="images/travel.jpg" hidden></img>
   </div>
   
 </body>

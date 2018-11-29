@@ -1,75 +1,34 @@
 body {
-  padding: 50px;
   font: 16px "Noto Sans", serif;
   background: #252525;
   color: #e8e8e8;
-  margin: 5em auto;
-  width: 555px;
 }
 
-h1 {
-  font-size: 1.5em;
-  margin: 0 auto 2.5em;
-  font-weight: 700;
+.mode-image {
+  width: 57%;
 }
 
-#fuel-gauge {
-  width: 550px;
-  height: 35px;
-}
-#fuel-gauge::-webkit-meter-bar {
-  background: none;
-  background-color: whiteSmoke;
-  box-shadow: 0 5px 5px -5px #333 inset;
-  border-radius: 5px;
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#fuel-gauge::-webkit-meter-optimum-value,
-#fuel-gauge::-webkit-meter-suboptimum-value,
-#fuel-gauge::-webkit-meter-even-less-good-value 
-{
-  	border-radius: 4px;
+.error-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#fuel-gauge::-webkit-meter-optimum-value 
-{
-  	background: forestgreen;
+.caution-image {
+  width: 4%;
 }
 
-#fuel-gauge::-webkit-meter-suboptimum-value 
-{
-  	background: gold;
-}
-
-#fuel-gauge::-webkit-meter-even-less-good-value  
-{
-  	background: firebrick;
-}
-
-#miles-left {
-  float: right;
-}
-
-.all-buttons {
-  margin: 5em auto;
-}
-
-.button-wrapper {
-  padding-top: 5px;
-}
-
-.button {
-  color: white;
-  box-shadow: none;
-  padding: 5px;
-  border-radius: 5px;
-  width: 100%;
-}
-
-.fill-tank-button {
-  background: forestgreen;
-}
-
-.drive-button {
-  background: firebrick;
+.error-message {
+  margin: 1px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
