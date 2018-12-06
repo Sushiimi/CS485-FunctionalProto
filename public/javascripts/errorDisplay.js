@@ -2,17 +2,18 @@
 $( function () {
   var errorDisplayed = false;
   var errorMessages = ["Tire Pressure Low","Dead Battery","Gas Cap Issues","Starter Issues"];
-  var min = 0, max = 3;
-  var errorInterval = 5000;
+  var errorInterval = 10000;
+  var currentErrorIndex = 0;
+  
+  shuffle( errorMessages )
+  console.log( errorMessages );
 
   window.setInterval( function() {
     if( errorDisplayed == false ) {
       $(".on-image").show("slow", function() {});
       $(".off-image").hide("slow", function() {});
       errorDisplayed = true;
-      var random = Math.floor(Math.random() * (+max - +min)) + +min;
-      console.log("errorMessage:", errorMessages[random]);
-      $(".error-message").html(errorMessages[random]);
+      $(".error-message").html(errorMessages[currentErrorIndex++]);
       clearInterval();
     }// end errorDisplayed FALSE
 

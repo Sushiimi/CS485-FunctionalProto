@@ -2,37 +2,20 @@
 // 1,2,3 for standard
 // 3,4,5 for travel
 
-// shuffling array for mode images
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
-
 $( function () {
   var standardRandoms = ['1', '2', '3'];
   var travelRandoms = ['1', '2', '3'];
+  
 
   // false is error testing, true is identification testing
   var testingMode = false;
 
+  // shuffle the arrays for random sets between test subjects
   shuffle(standardRandoms);
   shuffle(travelRandoms);
   console.log("standard: ", standardRandoms);
   console.log("travel:", travelRandoms);
+  $( ".mode-image" ).attr('src', `images/standard${standardRandoms[0]}.jpg`);// set initial image randomly
 
   $(document).keypress( function(e) {
     // 1 = 49, 2 = 50, 3 = 51
@@ -61,6 +44,23 @@ $( function () {
       console.log("'6' key pressed");
       $( ".mode-image" ).attr('src', `images/travel${travelRandoms[2]}.jpg`);
     }
+    // 116 = 't'
+    if ( e.which == 116 ) {
+      testingMode = !testingMode;
+      console.log("testing mode", testingMode);
+      if( testingMode == true ) {
+        alert("identification testing mode started");
+        $( ".hideAll" ).hide();
+      }
+      else {
+        alert("error testing mode started");
+        $(".hideAll" ).show();
+      }
+    }
+    // 100 = d; debug menu to check for keymapping
+    if( e.which == 100 ) {
+      alert("Press 'enter' to remove error on confirmation\nPress 1,2,3 for standard modes, Press 4,5,6 for travel modes\nPress t to change to error testing mode\nPress 'space' show dashboard when in identification mode");
+    }
   });
 
   $(document).keydown( function(e) {
@@ -77,29 +77,4 @@ $( function () {
     }
   })
   
-  $(document).keypress( function(e) {
-    // 116 = 't'
-    if ( e.which == 116 ) {
-      if( testingMode ){
-        alert("error testing mode");
-        $( ".hideAll" ).hide();
-      }
-      else {
-        alert("idenification testing mode");
-      }
-      
-    }
-  })
-  
-})
-
-$( function() {
-  
-
-  $(document).keypress( function(e) {
-    if( e.which == 100 ) {
-      alert("Press 'enter' to remove error on confirmation\nPress 1,2,3 for standard modes, Press 4,5,6 for travel modes\nPress t to change to error testing mode\nPress 'space' show dashboard when in identification mode");
-    }
-  });
-
 })
