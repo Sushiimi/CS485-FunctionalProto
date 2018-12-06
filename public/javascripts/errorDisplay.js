@@ -2,7 +2,7 @@
 $( function () {
   var errorDisplayed = false;
   var errorMessages = ["Tire Pressure Low","Dead Battery","Gas Cap Issues","Starter Issues"];
-  var errorInterval = 3000;
+  var errorInterval = 15000;
   var currentErrorIndex = 0;
   
   shuffle( errorMessages )
