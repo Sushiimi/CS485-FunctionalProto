@@ -1,4 +1,5 @@
 // function to control shifting gears
+/*
 $( function() {
   var currentGear = 1;
 
@@ -27,3 +28,4 @@ $( function() {
   });
 
 })
+*/

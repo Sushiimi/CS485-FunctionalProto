@@ -6,13 +6,12 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
-  <script type="text/javascript" src="javascripts/changemode.js"></script>
   <script type="text/javascript" src="javascripts/errormessage.js"></script>
-  <script type="text/javascript" src="javascripts/gearshifting.js"></script>
+  <script type="text/javascript" src="javascripts/keypressHandler.js"></script>
   <script type="text/javascript" src="javascripts/debug.js"></script>
 </head>
 
-<body>
+<body class="hideAll">
   <div class="error-message-wrapper">
     <div class="error-image">
       <img class="caution-image off-image" src="images/cautionOFF.png"></img>
@@ -23,10 +22,10 @@
     </div>
   </div>
   <div class="mode-image-wrapper">
-    <img class="mode-image standard centered" src="images/standard.jpg"></img>
-    <img class="mode-image travel centered" src="images/travel.jpg" hidden></img>
+    <img class="mode-image centered" src="images/standard1.jpg"></img>
   </div>
-  <div class="gear-table-wrapper">
+  <!--
+    <div class="gear-table-wrapper">
     <table class="gear-table" border="1">
       <tr class="table-row">
         <td class="col1" style="background-color: lightblue">P</td>
@@ -37,5 +36,6 @@
         <td class="col6">M</td>
       </tr>
     </table>
+  -->
   </div>
 </body>
