@@ -2,7 +2,7 @@
 $( function () {
   var errorDisplayed = false;
   var errorMessages = ["Tire Pressure Low","Dead Battery","Gas Cap Issues","Starter Issues"];
-  var errorInterval = 10000;
+  var errorInterval = 3000;
   var currentErrorIndex = 0;
   
   shuffle( errorMessages )
@@ -13,7 +13,12 @@ $( function () {
       $(".on-image").show("slow", function() {});
       $(".off-image").hide("slow", function() {});
       errorDisplayed = true;
+      console.log("currentErrorIndex before:", currentErrorIndex);
       $(".error-message").html(errorMessages[currentErrorIndex++]);
+      if (currentErrorIndex == 4) {
+        currentErrorIndex = 0;
+      }
+      console.log("currentErrorIndex after:", currentErrorIndex);
       clearInterval();
     }// end errorDisplayed FALSE
 
